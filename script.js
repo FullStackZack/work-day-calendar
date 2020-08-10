@@ -13,13 +13,10 @@ for (i = 0; i < militaryHours.length; i++) {
     }
 }
 
-var textInput = $(".form-control")
-var saveBtn = $(".saveBtn");
-
-saveBtn.addEventListener("click", function(event) {
+$(".saveBtn").click(function(event) {
     event.preventDefault();
 
-    var text = textInput.value.trim();
+    var text = $(".textarea").val().trim();
 
     localStorage.setItem("text", JSON.stringify(text));
 })
