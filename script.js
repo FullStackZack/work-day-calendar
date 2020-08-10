@@ -12,3 +12,14 @@ for (i = 0; i < militaryHours.length; i++) {
         $("#" + i).addClass("future") 
     }
 }
+
+var textInput = $(".form-control")
+var saveBtn = $(".saveBtn");
+
+saveBtn.addEventListener("click", function(event) {
+    event.preventDefault();
+
+    var text = textInput.value.trim();
+
+    localStorage.setItem("text", JSON.stringify(text));
+})
