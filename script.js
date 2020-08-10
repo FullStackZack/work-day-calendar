@@ -13,16 +13,5 @@ for (i = 0; i < militaryHours.length; i++) {
     }
 }
 
-$(".saveBtn").on("click", function() {
 
-    $(".textarea").each(function() {
-        var textVal = $(this).val();
-        localStorage.setItem("text", textVal);
 
-        var retrieveText = localStorage.getItem("text")
-        console.log(retrieveText);
-
-        $(".textarea").append(retrieveText);
-
-    });
-});
