@@ -15,9 +15,14 @@ for (i = 0; i < militaryHours.length; i++) {
 
 $(".saveBtn").on("click", function() {
 
-    $(".form-control.description.textarea").each(function() {
-        var id = $(this).attr("id");
+    $(".textarea").each(function() {
         var textVal = $(this).val();
-        localStorage.setItem(id, textVal);
+        localStorage.setItem("text", textVal);
+
+        var retrieveText = localStorage.getItem("text")
+        console.log(retrieveText);
+
+        $(".textarea").append(retrieveText);
+
     });
 });
