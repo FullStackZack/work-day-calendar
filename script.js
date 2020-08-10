@@ -13,10 +13,11 @@ for (i = 0; i < militaryHours.length; i++) {
     }
 }
 
-$(".saveBtn").click(function() {
+$(".saveBtn").on("click", function() {
 
-    var input = $(".textarea").val();
-    localStorage.setItem("text", input);
-
-    localStorage.getItem("text");
-})
+    $(".form-control.description.textarea").each(function() {
+        var id = $(this).attr("id");
+        var textVal = $(this).val();
+        localStorage.setItem(id, textVal);
+    });
+});
