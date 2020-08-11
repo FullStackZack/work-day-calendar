@@ -13,20 +13,27 @@ for (i = 0; i < militaryHours.length; i++) {
     }
 };
 
-var timeBlock = $(".time-block");
-var textArea = $(".description");
+//console.log(currentHour);
 
 $(".saveBtn").on("click", function(event) {
     event.preventDefault();
 
-    var events = {
-        
-    }
+    /*
+    var key = $(this).siblings(".hour").text();
+    console.log(key);
 
-    var eventId = $(this).attr("id");
-    var eventText = $(this).parent().siblings().children(".description").val();
+    var value = $(this).prev().val();
+
+    localStorage.setItem(key, value);
+    */
+
+    
+    var eventId = $(this).attr("id"); 
+    console.log(eventId);
+    var eventText = $(this).parent().siblings().children(".description").val().trim();
+    console.log(eventText);
     localStorage.setItem(eventId, eventText);
 
-    localStorage.getItem(eventId);
+    //localStorage.getItem(eventId);
 
 });
