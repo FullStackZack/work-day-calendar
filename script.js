@@ -13,26 +13,7 @@ for (i = 0; i < militaryHours.length; i++) {
     }
 };
 
-var nine = JSON.parse(localStorage.getItem("9 AM"));
-$("#0").val(nine);
-var ten = JSON.parse(localStorage.getItem("10 AM"));
-$("#1").val(ten);
-var eleven = JSON.parse(localStorage.getItem("11 AM"));
-$("#2").val(eleven);
-var twelve = JSON.parse(localStorage.getItem("12 PM"));
-$("#3").val(twelve);
-var one = JSON.parse(localStorage.getItem("1 PM"));
-$("#4").val(one);
-var two = JSON.parse(localStorage.getItem("2 PM"));
-$("#5").val(two);
-var three = JSON.parse(localStorage.getItem("3 PM"));
-$("#6").val(three);
-var four = JSON.parse(localStorage.getItem("4 PM"));
-$("#7").val(four);
-var five = JSON.parse(localStorage.getItem("5 PM"));
-$("#8").val(five);
-
-
+// 
 $(".saveBtn").on("click", function() {
     var nineVal = $("#0").val();
     console.log(nineVal);
@@ -78,3 +59,26 @@ $(".saveBtn").on("click", function() {
     var fiveVal = $("#8").val();
     localStorage.setItem("5 PM", JSON.stringify(fiveVal));
 });
+
+$(".clearBtn").on("click", function() {
+    localStorage.clear();
+})
+
+var nine = JSON.parse(localStorage.getItem("9 AM"));
+$("#0").val(nine);
+var ten = JSON.parse(localStorage.getItem("10 AM"));
+$("#1").val(ten);
+var eleven = JSON.parse(localStorage.getItem("11 AM"));
+$("#2").val(eleven);
+var twelve = JSON.parse(localStorage.getItem("12 PM"));
+$("#3").val(twelve);
+var one = JSON.parse(localStorage.getItem("1 PM"));
+$("#4").val(one);
+var two = JSON.parse(localStorage.getItem("2 PM"));
+$("#5").val(two);
+var three = JSON.parse(localStorage.getItem("3 PM"));
+$("#6").val(three);
+var four = JSON.parse(localStorage.getItem("4 PM"));
+$("#7").val(four);
+var five = JSON.parse(localStorage.getItem("5 PM"));
+$("#8").val(five);
