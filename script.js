@@ -13,54 +13,55 @@ for (i = 0; i < militaryHours.length; i++) {
     }
 };
 
-// 
-$(".saveBtn").on("click", function() {
+
+$(".btn-info").on("click", function() {
     var nineVal = $("#0").val();
     console.log(nineVal);
     localStorage.setItem("9 AM", JSON.stringify(nineVal));
 });
 
-$(".saveBtn").on("click", function() {
+$(".btn-info").on("click", function() {
     var tenVal = $("#1").val();
     localStorage.setItem("10 AM", JSON.stringify(tenVal));
 });
 
-$(".saveBtn").on("click", function() {
+$(".btn-info").on("click", function() {
     var elevenVal = $("#2").val();
     localStorage.setItem("11 AM", JSON.stringify(elevenVal));
 });
 
-$(".saveBtn").on("click", function() {
+$(".btn-info").on("click", function() {
     var twelveVal = $("#3").val();
     localStorage.setItem("12 PM", JSON.stringify(twelveVal));
 });
 
-$(".saveBtn").on("click", function() {
+$(".btn-info").on("click", function() {
     var oneVal = $("#4").val();
     localStorage.setItem("1 PM", JSON.stringify(oneVal));
 });
 
-$(".saveBtn").on("click", function() {
+$(".btn-info").on("click", function() {
     var twoVal = $("#5").val();
     localStorage.setItem("2 PM", JSON.stringify(twoVal));
 });
 
-$(".saveBtn").on("click", function() {
+$(".btn-info").on("click", function() {
     var threeVal = $("#6").val();
     localStorage.setItem("3 PM", JSON.stringify(threeVal));
 });
 
-$(".saveBtn").on("click", function() {
+$(".btn-info").on("click", function() {
     var fourVal = $("#7").val();
     localStorage.setItem("4 PM", JSON.stringify(fourVal));
 });
 
-$(".saveBtn").on("click", function() {
+$(".btn-info").on("click", function() {
     var fiveVal = $("#8").val();
     localStorage.setItem("5 PM", JSON.stringify(fiveVal));
 });
 
-$(".clearBtn").on("click", function() {
+$("#clearBtn").on("click", function(event) {
+    event.preventDefault();
     localStorage.clear();
 })
 
