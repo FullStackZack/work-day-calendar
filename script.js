@@ -19,7 +19,9 @@ var textArea = $(".description");
 $(".saveBtn").on("click", function(event) {
     event.preventDefault();
 
-    
+    var events = {
+        
+    }
 
     var eventId = $(this).attr("id");
     var eventText = $(this).parent().siblings().children(".description").val();
