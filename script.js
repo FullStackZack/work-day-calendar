@@ -63,7 +63,7 @@ $(".btn-info").on("click", function() {
 $("#clearBtn").on("click", function(event) {
     event.preventDefault();
     localStorage.clear();
-})
+});
 
 var nine = JSON.parse(localStorage.getItem("9 AM"));
 $("#0").val(nine);
