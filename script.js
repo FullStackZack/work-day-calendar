@@ -13,9 +13,18 @@ for (i = 0; i < militaryHours.length; i++) {
     }
 };
 
-$(".saveBtn").on("click", function() {
+var timeBlock = $(".time-block");
+var textArea = $(".description");
+
+$(".saveBtn").on("click", function(event) {
+    event.preventDefault();
+
+    
+
     var eventId = $(this).attr("id");
     var eventText = $(this).parent().siblings().children(".description").val();
     localStorage.setItem(eventId, eventText);
+
+    localStorage.getItem(eventId);
 
 });
