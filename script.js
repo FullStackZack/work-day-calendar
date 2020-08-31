@@ -36,7 +36,7 @@ $(".btn-info").on("click", function() {
 });
 
 // 12 PM
-$(".btn-info").on("click", function() {
+(".btn-info").on("click", function() {
     var twelveVal = $("#3").val();
     localStorage.setItem("12 PM", JSON.stringify(twelveVal));
 });
